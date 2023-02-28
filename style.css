@@ -1,0 +1,111 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: normal;
+}
+
+ol,
+ul,
+a {
+  list-style: none;
+  text-decoration: unset;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: black;
+}
+.button-menu {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.time-button {
+  margin-left: 20px;
+}
+.start {
+  margin-left: 100px;
+}
+.stop-start {
+  margin-left: 10px;
+}
+.clock {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: black;
+}
+#clockChange {
+  border: 1px solid transparent;
+  box-shadow: 1;
+  padding: 5px;
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25),
+    0 10px 10px rgba(255, 255, 255, 0.22);
+  color: white;
+}
+.time-button {
+  --b: 3px;
+  --s: 0.45em;
+  --color: white;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.time-button:hover,
+.time-button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.time-button:active {
+  background: var(--color);
+  color: #fff;
+}
+.time-button:focus {
+  color: red;
+}
